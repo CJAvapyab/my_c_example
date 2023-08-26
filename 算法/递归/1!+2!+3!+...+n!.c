@@ -1,8 +1,8 @@
 #include <stdio.h>
-
 int func(int);
+int count;
 int func(int a){
-    int div=1,count;
+    int div=1;
     for(int i=1;i<=a;i++){
         div *= i;
     }
@@ -19,8 +19,9 @@ int func(int a){
 int main()
 {
     int n;
+    printf("请输入一个正整数n(n>2)：");
     scanf("%d",&n);
-    printf("%d\n",func(n));
+    printf("1!+2!+...+%d!=%d\n",n,func(n));
 
     return 0;
 }
