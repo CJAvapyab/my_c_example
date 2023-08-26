@@ -1,4 +1,4 @@
-~~~json
+~~~
 void c(){
     extern count;
     count++;
