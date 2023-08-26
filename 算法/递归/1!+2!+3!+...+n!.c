@@ -1,8 +1,8 @@
 #include <stdio.h>
+
 int func(int);
-int count;
 int func(int a){
-    int div=1;
+    int div=1,count;
     for(int i=1;i<=a;i++){
         div *= i;
     }
