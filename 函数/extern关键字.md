@@ -4,6 +4,9 @@ extern关键字
 
 
 ~~~
+#include<stdio.h>
+
+void c();
 void c(){
     extern count;
     count++;
