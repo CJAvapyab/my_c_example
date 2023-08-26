@@ -1,3 +1,4 @@
+                                   ###extern关键字
 ~~~
 void c(){
     extern count;
