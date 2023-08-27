@@ -4,8 +4,8 @@ void quick_sort(int array[],int left,int right);
 void quick_sort(int array[],int left,int right)
 {
     int i=left,j = right;
-    int temp;
-    int pivot;
+    int temp;//互换时用
+    int pivot;//基准点
 
     pivot = array[(left+right)/2];
     while(i<=j)
