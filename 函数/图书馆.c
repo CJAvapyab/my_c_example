@@ -37,7 +37,7 @@ int main(void)
         printbook(&book[i]);
         putchar('\n');
     }
-     free(book);
+    free(book);
     return 0;
 }
 
