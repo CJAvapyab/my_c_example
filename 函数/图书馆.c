@@ -25,6 +25,11 @@ int main(void)
     scanf("%d",&n);
     struct Book * book;
     book = (struct Book *)malloc(sizeof(book)*n);
+    if(book==NULL)
+    {
+        printf("内存分配失败了！\n");
+        exit(1);
+    }
     for(int i=0;i<n;i++)
     {
         printf("开始录入第%d本书...\n",i+1);
