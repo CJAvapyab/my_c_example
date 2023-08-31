@@ -7,6 +7,11 @@ struct Book
     char author[40];
     struct Book *next;
 };
+void getInput(struct Book *book);
+void addBook(struct Book **library);
+void printlibrary(struct Book *library);
+void releaselibrary(struct Book **library);
+
 void getInput(struct Book *book)
 {
     printf("请输入书名：");
@@ -45,11 +50,21 @@ void printlibrary(struct Book *library)
     book = library;
     while(book != NULL)
     {
-        printf("Book%d:",count);
+        printf("Book%d:\n",count);
         printf("书名：%s\n",book->title);
         printf("作者：%s\n",book->author);
         book = book->next;
         count++;
+    }
+}
+void releaselibrary(struct Book **library)
+{
+    struct Book *temp;
+    while(*library != NULL)
+    {
+        temp = *library;
+        *library = (*library)->next;
+        free(temp);
     }
 }
 int main(void)
@@ -82,7 +97,7 @@ int main(void)
     {
         printlibrary(library);
     }
-
+    releaselibrary(&library);
     return 0;
 }
 
